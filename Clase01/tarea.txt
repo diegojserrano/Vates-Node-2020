@@ -1,0 +1,7 @@
+Tarea:
+
+- Cuando tengan las virtuales instalar node.
+- Hacer un sitio similar al contador de visitas que registre una coleccion de nombres:
+
+1: al navegar "/agregar/NOMBRE", debe agregar NOMBRE a un arreglo.
+2: al navegar "/listar", debe devolverse una tabla de html con todos los nombres registrados, a razón de un nombre por fila.
