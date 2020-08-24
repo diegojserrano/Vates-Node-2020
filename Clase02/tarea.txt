@@ -1,0 +1,3 @@
+Reescribir el ejercicio de la tarea de la semana pasada 
+(../Clase01/servidor1.js) usando lo que vimos hoy
+
