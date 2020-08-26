@@ -1,0 +1,14 @@
+{
+  "name": "abm-nombres",
+  "version": "1.0.0",
+  "description": "Ejercicio: alta y listado de nombres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Curso de agosto",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

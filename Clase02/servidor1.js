@@ -1,5 +1,6 @@
 var http = require ('http')
 const { read } = require('fs')
+const { fileURLToPath } = require('url')
 
 
 let visitas = 0
@@ -14,18 +15,15 @@ http.createServer((req, res) => {
         res.end("Nombre " + nombre + " agregado correctamente")
     }
     else if (req.url == "/listar") {
-        let table = "<table border=1>"
-        for (let i = 0; i < nombres.length; i++) 
-            table += "<tr><td>" + nombres[i] + "</td></tr>"
-        table += "</table>"
-        res.end(table)
+        let filas = w.reduce((x,y) => x+`<tr><td>${y}</tr></td>`, '') 
+        res.end(`<table>${filas}</table>`)
     }
     else if (req.url == "/contar") {
         visitas++
         res.end("contado correctamente")
     }
     else if (req.url == "/consultar") {
-        res.end("<h1>Hola!, van " + visitas + " </h1>")
+        res.end(`<h1>Hola!, van ${visitas} </h1>`)
     }
     else 
         res.end("ERROR")
