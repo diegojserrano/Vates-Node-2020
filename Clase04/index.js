@@ -7,10 +7,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get("/", (req, res) => { res.end("Hola!")  } )
 
-app.get("/agregar/:nombre/:apellido", (req,res) => {
+app.get("/agregar/:nombre/:apellido", async (req,res) => {
     const nuevaPersona = { nombre: req.params.nombre, apellido: req.params.apellido } 
-    personas.agregar(nuevaPersona)
-    res.end(`Nombre ${nuevaPersona.nombre} agregado correctamente`)
+    const id = await personas.agregar(nuevaPersona)
+    res.end(`Nombre ${nuevaPersona.nombre} agregado correctamente, con id= ${id}`)
 })
 
 app.get("/agregar", (req,res) => {
@@ -25,16 +25,17 @@ app.post("/agregar", (req,res) => {
     res.end(`Nombre ${nuevaPersona.nombre} agregado correctamente`)
 })
 
-app.get("/listar", (req,res) => {
+app.get("/listar", async (req,res) => {
+    const resultado = await personas.consultar()
     res.setHeader("Content-Type","application/json")
-    res.end(JSON.stringify(personas.consultar()))
+    res.end(JSON.stringify(resultado))
 })
 
-app.get("/obtener/:codigopersona", (req, res) => {
+app.get("/obtener/:codigopersona", async (req, res) => {
+    const resultado = await personas.obtener(req.params.codigopersona)
     res.setHeader("Content-Type","application/json")
-    res.end(JSON.stringify(personas.obtener(req.params.codigopersona)))
+    res.end(JSON.stringify(resultado))
 })
-
 
 app.listen(8000)
 
