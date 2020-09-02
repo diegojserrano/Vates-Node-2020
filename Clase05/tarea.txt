@@ -1,0 +1,5 @@
+Tarea:
+
+- Hacer andar el ejemplo en un SQL Server
+- Agregar la funcionalidad de borrar personas
+
