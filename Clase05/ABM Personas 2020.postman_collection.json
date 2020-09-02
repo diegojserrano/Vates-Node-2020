@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "b488fb37-f285-4280-8abf-2bedde7dda50",
+		"name": "ABM Personas 2020",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Contador",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/contar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"contar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar el contador",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/consultar",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"consultar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peticion a direccion incorrecta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/asdfasdf",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"asdfasdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Matias",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Velez",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una persona por uri",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Matias",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "apellido",
+							"value": "Velez",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/personas/nombreuri/apellidouri",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"personas",
+						"nombreuri",
+						"apellidouri"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar las personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar una persona",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/personas/2017",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"personas",
+						"2017"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar una persona",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/personas/2017",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"personas",
+						"2017"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
