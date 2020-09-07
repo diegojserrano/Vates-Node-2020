@@ -1,0 +1,6 @@
+- listado de estados civiles
+- en el agregar persona incluir el id de estado civil
+- al listado de personas agregarle una columna más con el nombre del estado civil
+- listar nombre de estado civil y cantidad de personas con cada estado
+
+
