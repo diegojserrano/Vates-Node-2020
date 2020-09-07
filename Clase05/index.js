@@ -23,12 +23,6 @@ app.post("/personas/:nombre/:apellido", async (req,res) => {
     res.end()
 })
 
-//app.post("/personas", (req,res) => {
-//    const nuevaPersona = { nombre: req.query.nombre, apellido: req.query.apellido } 
-//    personas.agregar(nuevaPersona)
-//    res.end(`Nombre ${nuevaPersona.nombre} agregado correctamente`)
-//})
-
 app.post("/personas", (req,res) => {
     const nuevaPersona = { nombre: req.body.nombre, apellido: req.body.apellido } 
     console.log(nuevaPersona)
